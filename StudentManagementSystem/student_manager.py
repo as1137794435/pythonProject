@@ -1,7 +1,9 @@
+from StudentManagementSystem.student import Student
+
 class StudentManager(object):
 
-    def __int__(self):
-        self.student_list = []
+    def __init__(self):
+        self.students_list = []
 
     @staticmethod
     def show_info():
@@ -33,7 +35,18 @@ class StudentManager(object):
             print('Input program error')
 
     def add_student_info(self):
-        print('Add student')
+        student_id = input('Please enter the ID of the student you want to add:')
+        for student_info in self.students_list:
+            if student_info.student_id == student_id:
+                print('The ID already exists and cannot be added')
+                return
+
+        else:
+            name = input('Please enter the name of the student you want to add:')
+            age = input('Please enter the age of the student you want to add:')
+            s1 = Student(student_id, name, age)
+            self.students_list.append(s1)
+
 
     def delete_student_info(self):
         print('delete student')
