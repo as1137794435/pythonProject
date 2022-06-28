@@ -7,4 +7,4 @@ class Student(object):
         self.age = age
 
     def __str__(self):
-        return f'name{self.name}, ID{self.student_id}, age{self.age}'
+        return f'name:{self.name}, ID:{self.student_id}, age:{self.age}'

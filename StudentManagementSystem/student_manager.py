@@ -1,5 +1,6 @@
 from StudentManagementSystem.student import Student
 
+
 class StudentManager(object):
 
     def __init__(self):
@@ -26,7 +27,7 @@ class StudentManager(object):
         elif num == 4:
             self.search_student_info()
         elif num == 5:
-            self.show_student_info()
+            self.show_all_student_info()
         elif num == 6:
             self.save_student_info()
         elif num == 7:
@@ -56,7 +57,7 @@ class StudentManager(object):
                 print('Delete successful')
                 return
         else:
-                print('This student does not exist')
+            print('This student does not exist')
 
     def modify_student_info(self):
         student_id = input('Please enter the ID of the student you want to modify:')
@@ -72,13 +73,38 @@ class StudentManager(object):
             print('No such student was found')
 
     def search_student_info(self):
-        print('search student')
+        student_id = input('Please enter the ID of the student you want to search:')
+        for student_info in self.students_list:
+            if student_info.student_id == student_id:
+                print(student_info)
+                return
+        else:
+            print('No such student was found')
 
-    def show_student_info(self):
-        print('show all student')
+    def show_all_student_info(self):
+        for student_info in self.students_list:
+            print(student_info)
 
     def save_student_info(self):
-        print('save student')
+        file = open('student_info.txt', 'a')
+        for student_info in self.students_list:
+            file.write(str(student_info.__dict__) + '\n')
+        file.close()
+        print('save successful')
+
+    def load_student_info(self):
+        file = open('student_info.txt', 'r')
+        while True:
+            content = file.readline()
+            if content == '':
+                break
+#Dictionary type string is converted to dictionary
+#The dictionary prefix +** can be converted to this type of keyword argument assignment for the key = value
+            dict1 = eval(content)
+            s1 = Student(**dict1)
+            self.students_list.append(s1)
+        file.close()
 
     def exit_program(self):
-        print('exit program')
+        self.save_student_info()
+        exit()
