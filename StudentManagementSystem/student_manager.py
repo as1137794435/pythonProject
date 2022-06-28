@@ -46,13 +46,30 @@ class StudentManager(object):
             age = input('Please enter the age of the student you want to add:')
             s1 = Student(student_id, name, age)
             self.students_list.append(s1)
-
+            print('Add successful')
 
     def delete_student_info(self):
-        print('delete student')
+        student_id = input('Please enter the ID of the student you want to delete:')
+        for student_info in self.students_list:
+            if student_info.student_id == student_id:
+                self.students_list.remove(student_info)
+                print('Delete successful')
+                return
+        else:
+                print('This student does not exist')
 
     def modify_student_info(self):
-        print('modify student')
+        student_id = input('Please enter the ID of the student you want to modify:')
+        for student_info in self.students_list:
+            if student_info.student_id == student_id:
+                name = input('new name:')
+                age = input('new age:')
+                student_info.name = name
+                student_info.age = age
+                print('modify successful')
+                return
+        else:
+            print('No such student was found')
 
     def search_student_info(self):
         print('search student')
