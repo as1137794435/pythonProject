@@ -14,14 +14,15 @@ server.bind(('192.168.14.26',8003))
 server.listen(5)
 print('server starts')
 # wait for connection of client
-client_socket, addr = server.accept()
-print('client socket',client_socket)
-print('client address',addr)
-# Receive data
-recv_data = client_socket.recv(1024)
-print(recv_data)
-# return data
-data = 'Hello client'
-client_socket.send(data.encode())
+while True:
+    client_socket, addr = server.accept()
+    print('client socket',client_socket)
+    print('client address',addr)
+    # Receive data
+    recv_data = client_socket.recv(1024)
+    print(recv_data)
+    # return data
+    data = 'Hello client'
+    client_socket.send(data.encode())
 # close
 server.close()
