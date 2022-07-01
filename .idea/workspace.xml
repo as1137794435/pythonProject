@@ -5,22 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edf23ac0-406d-45f8-a228-7ffa40482c80" name="变更" comment="Revert &quot;Student management system&quot;&#10;&#10;This reverts commit ad4a44d40f84eece7532af1b8ac148bebb091e8f.">
+      <change afterPath="$PROJECT_DIR$/Socket/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StudentManagementSystem/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagementSystem/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StudentManagementSystem/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagementSystem/student.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StudentManagementSystem/student_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/StudentManagementSystem/student_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BJydOjHVbAQc7JIheoQclX74Q8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
@@ -93,6 +112,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Revert &quot;Student management system&quot;&#10;&#10;This reverts commit ad4a44d40f84eece7532af1b8ac148bebb091e8f.">
       <created>1656397071563</created>
@@ -108,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656399736955</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Revert &quot;Student management system&quot;&#10;&#10;This reverts commit ad4a44d40f84eece7532af1b8ac148bebb091e8f.">
+      <created>1656404652222</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656404652222</updated>
+    </task>
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="edf23ac0-406d-45f8-a228-7ffa40482c80" name="变更" comment="Revert &quot;Student management system&quot;&#10;&#10;This reverts commit ad4a44d40f84eece7532af1b8ac148bebb091e8f." />
+      <created>1656638574297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656638574297</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
