@@ -5,6 +5,20 @@
 # @Software: PyCharm
 
 import socket
+import threading
+
+
+def client_data(client_socket):
+    while True:
+        # Receive data
+        recv_data = client_socket.recv(1024)
+        print(recv_data)
+        # return data
+        data = 'Hello client'
+        client_socket.send(data.encode())
+
+# Encapsulates methods for processing client data
+
 
 # Create object
 server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -15,14 +29,12 @@ server.listen(5)
 print('server starts')
 # wait for connection of client
 while True:
+    # Waiting for the client to connect
     client_socket, addr = server.accept()
     print('client socket',client_socket)
     print('client address',addr)
-    # Receive data
-    recv_data = client_socket.recv(1024)
-    print(recv_data)
-    # return data
-    data = 'Hello client'
-    client_socket.send(data.encode())
+    # Create threads to handle requests from each client
+    t = threading.Thread(target=client_data,args = (client_socket,))
+    t.start()
 # close
 server.close()
